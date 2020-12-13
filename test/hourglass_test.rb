@@ -79,4 +79,40 @@ describe "Hourglass" do
     # Assert
     expect(answer).must_equal 0
   end
+
+  it "will return 13 for a this matrix" do
+    # Arrange 
+    matrix = [
+      [1,  1,  1,  0,  0, 0]
+      [0,  1,  0,  0,  0, 0]
+      [1,  1,  1,  0,  0, 0]
+      [0,  9,  2, -4, -4, 0]
+      [0,  0,  0, -2,  0, 0]
+      [0,  0, -1, -2, -4, 0,]
+    ]
+
+    # Act
+    answer = hourglass(matrix)
+
+    # Assert
+    expect(answer).must_equal 13
+  end
+
+  it "will return -19 for a this matrix" do
+    # Arrange 
+    matrix = [
+      [ 0, -4, -6,  0, -7, -6],
+      [-1, -2, -6, -8, -3, -1],
+      [-8, -4, -2, -8, -8, -6],
+      [-3, -1, -2, -5, -7, -4],
+      [-3, -5, -3, -6, -6, -6],
+      [-3, -6,  0, -8, -6, -7],
+    ]
+
+    # Act
+    answer = hourglass(matrix)
+
+    # Assert
+    expect(answer).must_equal -19
+  end
 end

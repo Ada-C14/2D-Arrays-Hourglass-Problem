@@ -116,3 +116,5 @@ The hourglass with the maximum sum (19) is:
   2
 1 2 4
 ```
+
+This problem was originally found on [HackerRank](https://www.hackerrank.com/challenges/2d-array/problem).

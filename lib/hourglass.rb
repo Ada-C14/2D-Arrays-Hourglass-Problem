@@ -4,7 +4,7 @@
 ROW = 6
 COL = 6
 def hourglass(matrix)
-  max = matrix[0].sum
+  max = -Float::INFINITY
   sum = 0
   (ROW - 2).times do |r|
     (COL - 2).times do |c|

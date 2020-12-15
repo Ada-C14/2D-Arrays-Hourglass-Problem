@@ -3,7 +3,7 @@ def hourglass(matrix)
   j = 0 # column
 
   last_column = matrix[i].length - 1
-  last_row = last_column
+  last_row = matrix.length - 1
 
   while (i + 2) <= last_row
     while (j + 2) <= last_column

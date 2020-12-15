@@ -3,19 +3,25 @@
 
 ROW = 6
 COL = 6
+HG_LENGTH = 3
 def hourglass(matrix)
   max = -Float::INFINITY
-  sum = 0
-  (ROW - 2).times do |r|
-    (COL - 2).times do |c|
-    if c == 0
-      sum = matrix[r][c] + matrix[r][c + 1] + matrix[r][c + 2]
-      sum += matrix[r + 1][c + 1]
-      sum += matrix[r + 2][c] + matrix[r + 2][c + 1] + matrix[r + 2][c + 2]
-    else #practing sliding window although it might not be efficient here. Removing the if statement will also work.
-      sum = sum - matrix[r][c - 1] - matrix[r + 1][c] - matrix[r + 2][c - 1] + matrix[r][c + 2] + matrix[r + 1][c + 1] + matrix[r + 2][c + 2]
-    end
-    max = sum if sum > max
+
+  (ROW - HG_LENGTH + 1).times do |r|
+    hourglass_start = 0
+    hourglass_end  = 0
+    sum = 0
+    while hourglass_end  < COL
+      #keep adding top and bottom elements
+      sum += matrix[r][hourglass_end]
+      sum += matrix[r + 2][hourglass_end]
+      if hourglass_end >= HG_LENGTH - 1 #when we have a hourglass
+        sum += matrix[r + 1][hourglass_start + 1] #add middle
+        max = sum if sum > max
+        sum = sum - matrix[r][hourglass_start] - matrix[r + 2][hourglass_start] - matrix[r + 1][hourglass_end - 1] #Subtract the elements going out of the sliding window
+        hourglass_start += 1
+      end
+      hourglass_end += 1
     end
   end
   return max

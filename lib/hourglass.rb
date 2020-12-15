@@ -8,7 +8,7 @@ def hourglass(matrix)
   col = matrix[0].length
   max = -Float::INFINITY
 
-  (row - HG_LENGTH + 1).times do |r|
+  (row - 2).times do |r|
     hourglass_start = 0
     hourglass_end  = 0
     sum = 0

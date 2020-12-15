@@ -3,7 +3,6 @@ def hourglass(matrix)
   rows = matrix.length
   columns = matrix[0].length
   start_row = 0
-  start_column = 0
   high_sum = -63
   outer_counter = 1
   while start_row <= rows - 3

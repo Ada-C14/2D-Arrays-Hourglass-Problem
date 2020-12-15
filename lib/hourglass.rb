@@ -35,7 +35,7 @@ def hourglass(matrix)
       until col_end == matrix[0].size
         hs_sum = (
           row[col_start] + row[midpoint] + row[col_end] +
-          matrix[index + 1][(col_start + col_end) / 2] +
+          matrix[index + 1][midpoint] +
           matrix[index + 2][col_start] + matrix[index + 2][midpoint] + matrix[index + 2][col_end]
         )
 

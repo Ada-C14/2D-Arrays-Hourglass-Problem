@@ -1,18 +1,19 @@
 # time complexity: matrix size is fixed so O(1), otherwise O(row*col)
 # space complexity: O(1) as only integer variables were created.
 
-ROW = 6
-COL = 6
+
 HG_LENGTH = 3
 def hourglass(matrix)
+  row = matrix.length
+  col = matrix[0].length
   max = -Float::INFINITY
 
-  (ROW - HG_LENGTH + 1).times do |r|
+  (row - HG_LENGTH + 1).times do |r|
     hourglass_start = 0
     hourglass_end  = 0
     sum = 0
 
-    while hourglass_end  < COL
+    while hourglass_end  < col
       #keep adding top and bottom elements
       sum += matrix[r][hourglass_end]
       sum += matrix[r + 2][hourglass_end]

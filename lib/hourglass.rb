@@ -19,8 +19,7 @@
 # >> cols == num cols in input matrix
 # >> 2 --> width of hourglass (3) - 1; height of hourglass (3) - 1
 #
-# Space: O(rows * cols) (similar as above)
-# >> array slicing
+# Space: O(1)
 
 
 def hourglass(matrix)
@@ -31,11 +30,14 @@ def hourglass(matrix)
     if index + 2 < matrix.size
       col_start = 0
       col_end = 2
+      midpoint = (col_start + col_end) / 2
 
       until col_end == matrix[0].size
-        hs_sum = (row[col_start..col_end].sum +
-                  matrix[index + 1][(col_start + col_end) / 2] +
-                  matrix[index + 2][col_start..col_end].sum)
+        hs_sum = (
+          row[col_start] + row[midpoint] + row[col_end] +
+          matrix[index + 1][(col_start + col_end) / 2] +
+          matrix[index + 2][col_start] + matrix[index + 2][midpoint] + matrix[index + 2][col_end]
+        )
 
         if !max_sum || max_sum < hs_sum
           max_sum = hs_sum
@@ -43,6 +45,7 @@ def hourglass(matrix)
 
         col_start += 1
         col_end += 1
+        midpoint += 1
       end
     end
   end

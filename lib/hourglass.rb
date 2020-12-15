@@ -1,7 +1,11 @@
-
+# O(mn) time complexity -- Where m = # of rows, n = # of columns, since you have to check every element of every row,
+#                          which also happens to be the number of columns, there really doesn't seem to be a way around
+#                          a nested loop -- the outer loop grows in # ops with m, or the number of rows, the inner loop
+#                          grows in # ops with n, the number of columns
+# O(1) space complexity -- max and cur_sum are only two new variables created every time
 def hourglass(matrix)
   # can we assume valid input?
-  # assuming anything that isn't in a 3by3 is invalid input
+  # assuming anything that isn't more or equal to a 3by3 is invalid input
   # let's just return 0 since it isn't an hourglass to begin with
 
   return 0 if matrix.length < 3 || matrix[0].length < 3

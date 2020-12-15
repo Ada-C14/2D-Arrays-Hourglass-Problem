@@ -11,10 +11,12 @@ def hourglass(matrix)
     hourglass_start = 0
     hourglass_end  = 0
     sum = 0
+
     while hourglass_end  < COL
       #keep adding top and bottom elements
       sum += matrix[r][hourglass_end]
       sum += matrix[r + 2][hourglass_end]
+
       if hourglass_end >= HG_LENGTH - 1 #when we have a hourglass
         sum += matrix[r + 1][hourglass_start + 1] #add middle
         max = sum if sum > max
@@ -23,6 +25,7 @@ def hourglass(matrix)
       end
       hourglass_end += 1
     end
+
   end
   return max
 end

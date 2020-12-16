@@ -1,3 +1,5 @@
+# Time Complexity: O(n^2) where n is the number of rows and columns.
+# Space Complexity: O(1)
 def hourglass(matrix)
   i = 0 # row
   j = 0 # column

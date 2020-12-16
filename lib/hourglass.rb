@@ -1,8 +1,7 @@
 
 def hourglass(matrix)
   i = 0
-  j = 0
-  max_sum = -1 * Float::INFINITY
+  max_sum = (-1) * Float::INFINITY
 
   until matrix[i + 2].nil?
     j = 0

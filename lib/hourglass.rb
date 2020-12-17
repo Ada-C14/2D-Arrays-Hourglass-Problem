@@ -1,4 +1,5 @@
-
+# time complexity: O(n^2), there's no way around iterating basically through all the elements in the matrix
+# space complexity: O(1), no extra data structures are used.
 def hourglass(matrix)
   negative_infinity = -1.0/0.0
   max_sum = negative_infinity

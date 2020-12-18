@@ -1,6 +1,8 @@
+# Time - O(nm) where n and m represent the rows and columns
+# Space - O(1) as max_sum, row, column, and current_sum variables are constant
 def hourglass(matrix)
-    row = 0
-    max_sum = -63
+  row = 0
+  max_sum = -63
 
   while matrix[row + 2]
     column = 0

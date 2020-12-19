@@ -1,9 +1,8 @@
-# time: O(n^2) with n being the number of rows and the number of columns (they are the same in this case)
+# time: O(1) because n & m are constants at 6
 # space: O(1) all the variables are constant if n grows
 
-
 def sum_three(array, column_i)
-  return array[column_i] + array[column_i + 1] + array[column_i + 2]
+  return array[column_i..(column_i + 2)].sum
 end
 
 def hourglass(matrix)

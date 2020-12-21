@@ -1,4 +1,4 @@
-# Time - O(nm) where n and m represent the rows and columns
+# Time - O(nm) where n and m represent the rows and columns, can be reduced to O(1) as the matrix will always be 6x6
 # Space - O(1) as max_sum, row, column, and current_sum variables are constant
 def hourglass(matrix)
   row = 0

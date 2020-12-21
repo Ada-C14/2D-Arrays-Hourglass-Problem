@@ -1,3 +1,6 @@
+# time complexity: O(n)? Traversing through each value...although you're hitting the same value multiple times.
+#BUT you know this will always be a 6x6 matrix, so O(1)? I'm not sure!!
+# space complexity: O(1) --highest_sum is only holding one value
 
 def hourglass(matrix)
   return 0 if matrix.empty?

@@ -1,3 +1,5 @@
+# time complexity = O(n^2)
+# space complexity = O(1)
 
 def hourglass(matrix)
   sum = -100

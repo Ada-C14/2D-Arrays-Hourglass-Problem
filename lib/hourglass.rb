@@ -1,6 +1,5 @@
 
 def hourglass(matrix)
-  # raise NotImplementedError, "The matrix method has not been implemented yet!"
   # i is top left row coordinate
   # j is top left column coordinate
 

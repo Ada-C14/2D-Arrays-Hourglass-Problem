@@ -1,5 +1,8 @@
 
 def hourglass(matrix)
+  # time: O(nm) where n is the number of rows, m is the columns
+  # space: O(1), variables are constants
+
   # assumptions:
   # matrix is always a 6 by 6 cube; hourglass is always 3 by 1 by 3
 
@@ -29,6 +32,7 @@ def hourglass(matrix)
       hour_sum += matrix[i + 1][j + 1] # second
       hour_sum += matrix[i + 2][j] + matrix[i + 2][j + 1] + matrix[i + 2][j + 2] # third
 
+      # compare current hour_glass to max
       max ||= hour_sum # account for if max is nil
       if hour_sum > max
         max = hour_sum

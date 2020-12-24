@@ -1,7 +1,7 @@
 
 def hourglass(matrix)
   # raise NotImplementedError, "The matrix method has not been implemented yet!"
-  max = 0
+  max = -10000000000000
   (0..3).each do |row|
     (0..3).each do |col|
       sum = (matrix[row][col] + matrix[row][col + 1] + matrix[row][col + 2] + matrix[row + 1][col + 1] + matrix[row + 2][col] + matrix[row + 2][col + 1] + matrix[row + 2][col + 2])

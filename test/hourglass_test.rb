@@ -10,6 +10,7 @@ Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 describe "Hourglass" do
   it "will return 7 for the 1st example matrix" do
     # Arrange
+    puts "test # 1"
     matrix = [
       [1, 1, 1, 0, 0, 0],
       [0, 1, 0, 0, 0, 0],
@@ -28,9 +29,10 @@ describe "Hourglass" do
 
   it "will return 28 for the 2nd example matrix" do
     # Arrange
+    puts "test # 2"
     matrix = [
       [-9, -9, -9,  1, 1, 1],
-      [ 0,  -9, 0,  4, 3, 2],
+      [ 0, -9, 0,  4, 3, 2],
       [-9, -9, -9,  1, 2, 3],
       [ 0,  0,  8,  6, 6, 0],
       [ 0,  0,  0, -2, 0, 0],
@@ -46,6 +48,7 @@ describe "Hourglass" do
 
   it "will return 19 for the 3rd example matrix" do
     # Arrange
+    puts "test # 3"
     matrix = [
       [ 1,  1,  1,  0, 0, 0],
       [ 0,  1,  0,  0, 0, 0],
@@ -63,7 +66,8 @@ describe "Hourglass" do
   end
 
   it "will return 0 for a matrix of 0s" do
-    # Arrange 
+    # Arrange
+    puts "test # 4"
     matrix = [
       [ 0,  0,  0,  0, 0, 0],
       [ 0,  0,  0,  0, 0, 0],
@@ -81,15 +85,15 @@ describe "Hourglass" do
   end
 
   it "will return 13 for a this matrix" do
-    # Arrange 
+    # Arrange
+    puts "test # 5"
     matrix = [
-      [1,  1,  1,  0,  0, 0]
-      [0,  1,  0,  0,  0, 0]
-      [1,  1,  1,  0,  0, 0]
-      [0,  9,  2, -4, -4, 0]
-      [0,  0,  0, -2,  0, 0]
-      [0,  0, -1, -2, -4, 0,]
-    ]
+      [1,  1,  1,  0,  0, 0],
+      [0,  1,  0,  0,  0, 0],
+      [1,  1,  1,  0,  0, 0],
+      [0,  9,  2, -4, -4, 0],
+      [0,  0,  0, -2,  0, 0],
+      [0,  0, -1, -2, -4, 0]]
 
     # Act
     answer = hourglass(matrix)
@@ -99,7 +103,8 @@ describe "Hourglass" do
   end
 
   it "will return -19 for a this matrix" do
-    # Arrange 
+    # Arrange
+    puts "test # 6"
     matrix = [
       [ 0, -4, -6,  0, -7, -6],
       [-1, -2, -6, -8, -3, -1],

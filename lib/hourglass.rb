@@ -1,6 +1,8 @@
 
 def hourglass_sum(matrix)
   # raise NotImplementedError, "The matrix method has not been implemented yet!"
+  return nil if matrix.nil?
+
   max = -Float::INFINITY
   (0..3).each do |row|
     (0..3).each do |col|

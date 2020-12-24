@@ -20,7 +20,7 @@ describe "Hourglass" do
     ]
 
     # Act
-    answer = hourglass(matrix)
+    answer = hourglass_sum(matrix)
 
     # Assert
     expect(answer).must_equal 7
@@ -38,7 +38,7 @@ describe "Hourglass" do
     ]
 
     # Act
-    answer = hourglass(matrix)
+    answer = hourglass_sum(matrix)
 
     # Assert
     expect(answer).must_equal 28
@@ -56,7 +56,7 @@ describe "Hourglass" do
     ]
 
     # Act
-    answer = hourglass(matrix)
+    answer = hourglass_sum(matrix)
 
     # Assert
     expect(answer).must_equal 19
@@ -74,7 +74,7 @@ describe "Hourglass" do
     ]
 
     # Act
-    answer = hourglass(matrix)
+    answer = hourglass_sum(matrix)
 
     # Assert
     expect(answer).must_equal 0
@@ -92,7 +92,7 @@ describe "Hourglass" do
     ]
 
     # Act
-    answer = hourglass(matrix)
+    answer = hourglass_sum(matrix)
 
     # Assert
     expect(answer).must_equal 13
@@ -110,7 +110,7 @@ describe "Hourglass" do
     ]
 
     # Act
-    answer = hourglass(matrix)
+    answer = hourglass_sum(matrix)
 
     # Assert
     expect(answer).must_equal -19

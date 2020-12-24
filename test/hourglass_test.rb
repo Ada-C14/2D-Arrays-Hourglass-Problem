@@ -118,6 +118,6 @@ describe "Hourglass" do
     answer = hourglass(matrix)
 
     # Assert
-    expect(answer).must_equal -19
+        expect(answer).must_equal -19
   end
 end

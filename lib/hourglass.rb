@@ -4,7 +4,7 @@ def hourglass(matrix)
   row_base = 0
 
   while row_base < max_iteration_count
-    4.times do |i|
+    max_iteration_count.times do |i|
       row_one_sum = matrix[row_base][i..i + 2].sum
       row_two_sum = matrix[row_base + 1][i + 1]
       row_three_sum = matrix[row_base + 2][i..i + 2].sum

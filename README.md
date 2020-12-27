@@ -32,6 +32,15 @@ e f g
 
 There are **16** hourglasses in A. An hourglass sum is the sum of an hourglass' values. Calculate the hourglass sum for every hourglass in **A**, then print the maximum hourglass sum. The array will always be a 6 x 6 array.
 
+# matrix[i][j] 
+# matrix[i][j+1] 
+# matrix[i][j+2] 
+# matrix[i+1][j] 
+# matrix[i+1][j+1] 
+# matrix[i+1][j+2] 
+# matrix[i+2][j] 
+# matrix[i+2][j+1] 
+# matrix[i+2][j+2] 
 Example
 
 ```
@@ -42,6 +51,11 @@ Example
  0  0  0 -2 0 0
  0  0  1  2 4 0
  ```
+ # for an array, get me the largest sum of 3 consecutive elements
+ # for a matrix, get me the largest sum of 3x3 squares
+ # for a 3d array, get me the largest sum of 3x3x3 cubes 
+ # for n-d arrays get me the largest sum of 3x....n ..things
+ 
 
 The  hourglass sums are:
 

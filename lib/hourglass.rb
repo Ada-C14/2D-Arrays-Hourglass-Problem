@@ -1,7 +1,8 @@
 
 def hourglass(matrix)
   #raise NotImplementedError, "The matrix method has not been implemented yet!"
-  max = -100
+  # 7 values * smallest value they can be -9 
+  max = -63
   # Iterate over the rows first then columns
   4.times do |row|
     4.times do |col|

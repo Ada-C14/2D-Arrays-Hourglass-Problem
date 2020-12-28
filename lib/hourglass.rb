@@ -6,7 +6,7 @@ def hourglass(matrix)
   # shifts hourglass to the right
   (matrix.length - 2).times do |col|
     # calculates sums vertically
-    4.times do |row|
+    (matrix.length - 2).times do |row|
       # resets sum to zero
       hourglass_sum = 0
       3.times do |i|

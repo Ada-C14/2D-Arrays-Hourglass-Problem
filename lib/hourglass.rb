@@ -17,7 +17,7 @@ def hourglass(matrix)
       max_sum = hourglass_sum if max_sum.nil? || hourglass_sum > max_sum
       hourglass_sum = 0
     end
-
   end
+  
   return max_sum
 end

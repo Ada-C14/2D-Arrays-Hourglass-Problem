@@ -16,7 +16,7 @@
 def hourglass(matrix)
   raise ArgumentError, "Invalid matrix" if matrix.nil?
 
-  hg_sums = [] # collect each hourglass sum
+  hg_sums = []
   row_i = 0 # track row index
   col_i = 0 # track column index
 

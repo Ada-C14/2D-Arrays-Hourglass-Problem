@@ -4,8 +4,7 @@
 def hourglass(matrix)
   max_sum = nil
   # shifts hourglass to the right
-  # can use matrix.length - 2 instead of 4
-  4.times do |col|
+  (matrix.length - 2).times do |col|
     # calculates sums vertically
     4.times do |row|
       # resets sum to zero

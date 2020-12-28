@@ -5,16 +5,16 @@ def hourglass(matrix)
   max_sum = nil
   # shifts hourglass to the right
   # can use matrix.length - 2 instead of 4
-  4.times do |i|
+  4.times do |col|
     # calculates sums vertically
-    4.times do |j|
+    4.times do |row|
       # resets sum to zero
       hourglass_sum = 0
-      3.times do |k|
-        hourglass_sum += matrix[j][i + k]
-        hourglass_sum += matrix[j + 2][i + k]
+      3.times do |i|
+        hourglass_sum += matrix[row][col + i]
+        hourglass_sum += matrix[row + 2][col + i]
       end
-      hourglass_sum += matrix[j + 1][i + 1]
+      hourglass_sum += matrix[row + 1][col + 1]
       # hourglass sums can all be negative
       max_sum = hourglass_sum if max_sum.nil? || hourglass_sum > max_sum
     end

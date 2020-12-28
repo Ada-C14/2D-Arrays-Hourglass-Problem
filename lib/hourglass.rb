@@ -3,10 +3,10 @@
 
 def hourglass(matrix)
   max_sum = nil
-  # shifts hourglass to the right
-  (matrix.length - 2).times do |col|
-    # calculates sums vertically
-    (matrix.length - 2).times do |row|
+  # shifts hourglass down by a row
+  (matrix.length - 2).times do |row|
+    # calculates sums across matrix
+    (matrix.length - 2).times do |col|
       # resets sum to zero
       hourglass_sum = 0
       3.times do |i|

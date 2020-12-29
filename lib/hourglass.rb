@@ -11,5 +11,16 @@
 # 16 hourglasses total
 
 def hourglass(matrix)
-  raise NotImplementedError, "The matrix method has not been implemented yet!"
+  # raise NotImplementedError, "The matrix method has not been implemented yet!"
+  hourglass_sum = []
+  row = 0
+  4.times do
+    col = 0
+    4.times do
+      hourglass_sum.push(matrix[row][col] + matrix[row][col + 1] + matrix[row][col + 2] + matrix[row + 1][col + 1] + matrix[row + 2][col] + matrix[row + 2][col + 1] + matrix[row + 2][col + 2])
+      col += 1 #increment and shift start of column by one
+    end
+    row += 1 #increment and bump down to next row
+  end
+  return hourglass_sum.max
 end

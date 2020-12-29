@@ -5,7 +5,7 @@
 # return the max hourglass sum
 
 #PSEUDOCODE:
-# inititalize Array to keep track of each hourglass_sum
+# initialize hourglass_sum array to keep track of sum of each hourglass
 # set row/column variables to 0(index)
 # calculate all hourglasses total for each
 # 16 hourglasses total
@@ -17,10 +17,10 @@ def hourglass(matrix)
   4.times do
     col = 0
     4.times do
-      hourglass_sum.push(matrix[row][col] + matrix[row][col + 1] + matrix[row][col + 2] + matrix[row + 1][col + 1] + matrix[row + 2][col] + matrix[row + 2][col + 1] + matrix[row + 2][col + 2])
+      hourglass_sum.push(matrix[row][col] + matrix[row][col + 1] + matrix[row][col + 2] + matrix[row + 1][col + 1] + matrix[row + 2][col] + matrix[row + 2][col + 1] + matrix[row + 2][col + 2])# calculates sum for hourglass
       col += 1 #increment and shift start of column by one
     end
     row += 1 #increment and bump down to next row
   end
-  return hourglass_sum.max
+  return hourglass_sum.max # returns the max from all hourglass
 end
